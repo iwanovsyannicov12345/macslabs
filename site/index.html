@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>mac:lab — магазин техники Apple. MacBook Air и Pro с гарантией</title>
+<meta name="description" content="mac:lab — магазин MacBook Air и MacBook Pro. Официальная гарантия 12 месяцев, проверка при получении, доставка по РФ за 1–3 дня, рассрочка 0%.">
+<meta property="og:title" content="mac:lab — магазин техники Apple">
+<meta property="og:description" content="MacBook Air и Pro с гарантией, доставка по РФ за 1–3 дня.">
+<meta property="og:type" content="website">
+<link rel="preload" href="assets/fonts/unbounded-500-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-500-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF3B2F'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="prog" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <div class="wrap bar">
+    <a href="#" class="logo">mac<em>:</em>lab</a>
+    <nav class="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#config">Конфигуратор</a>
+      <a href="#why">Почему мы</a>
+      <a href="#acc">Аксессуары</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="acts">
+      <a href="tel:+74951234567" class="icb" aria-label="Позвонить">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      </a>
+      <button class="icb" id="cartBtn" aria-label="Корзина">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="dot" id="cartDot">0</span>
+      </button>
+      <button class="icb burger" id="burger" aria-label="Меню"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- FULLSCREEN MENU -->
+<div class="menu" id="menu">
+  <div class="wrap in-w">
+    <nav class="m-links" id="mLinks">
+      <a href="#catalog" data-img="assets/img/p-pro14.jpg"><s>01</s>Каталог</a>
+      <a href="#config" data-img="assets/img/p-air15.jpg"><s>02</s>Конфигуратор</a>
+      <a href="#why" data-img="assets/img/life-1.jpg"><s>03</s>Почему мы</a>
+      <a href="#acc" data-img="assets/img/acc-airpods-max.jpg"><s>04</s>Аксессуары</a>
+      <a href="#faq" data-img="assets/img/acc-imac.jpg"><s>05</s>Вопросы</a>
+    </nav>
+    <div class="m-media" id="mMedia">
+      <img src="assets/img/p-pro14.jpg" alt="" class="on">
+      <img src="assets/img/p-air15.jpg" alt="">
+      <img src="assets/img/acc-airpods-max.jpg" alt="">
+      <img src="assets/img/acc-imac.jpg" alt="">
+    </div>
+  </div>
+  <div class="m-foot">
+    <span>Москва, Пресненская наб. 12 · ежедневно 10:00–21:00</span>
+    <span>+7 495 123-45-67 · hello@maclab.ru</span>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="aura"></div><div class="aura b"></div>
+  <canvas class="mesh" id="mesh" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-main" data-parallax>
+        <div class="bgimg"><img src="assets/img/hero-main.jpg" alt="MacBook Pro" fetchpriority="high"></div>
+        <div class="hero-tags">
+          <span class="chip">M4 · M4 Pro · M4 Max</span>
+          <span class="chip">Гарантия 12 месяцев</span>
+          <span class="chip">Рассрочка 0%</span>
+        </div>
+        <h1 class="h-xl split" data-rv>Начни новый день с нового MacBook</h1>
+        <p class="lead" data-rv>Привозим, распаковываем вместе с вами и настраиваем прямо при получении. Не подошёл — забираем обратно в тот же день.</p>
+        <div class="hero-cta" data-rv>
+          <a href="#catalog" class="btn"><span>Смотреть каталог</span><span class="ar">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a href="#config" class="btn btn--ghost"><span>Собрать свою конфигурацию</span></a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <a href="#catalog"><img src="assets/img/hero-1.jpg" alt="MacBook Pro"><div><b>MacBook Pro</b><s>от 199 990 ₽</s></div></a>
+        <a href="#acc"><img src="assets/img/hero-2.jpg" alt="AirPods"><div><b>AirPods</b><s>от 14 990 ₽</s></div></a>
+      </div>
+    </div>
+    <div class="hero-strip" data-rv>
+      <div><b data-count="36">0</b><s>сотрудников</s></div>
+      <div><b data-count="2900" data-suffix="+">0</b><s>довольных клиентов</s></div>
+      <div><b data-count="7">0</b><s>лет на рынке</s></div>
+      <div><b data-count="3">0</b><s>дня доставка по РФ</s></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mq-t" id="mqTrack">
+    <span>MacBook Air M4</span><span>MacBook Pro M4 Max</span><span>Trade-in до 120 000 ₽</span>
+    <span>Рассрочка 0% на 12 месяцев</span><span>Проверка при получении</span><span>Официальная гарантия</span>
+    <span>Доставка за 1–3 дня</span><span>Настройка в подарок</span>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<section class="sec" id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-rv>Каталог</span>
+        <h2 class="h-lg split" data-rv style="margin-top:16px">Ноутбуки в наличии<br>в Москве</h2>
+      </div>
+      <div class="tabs" data-rv>
+        <button class="tab on" data-filter="all">Все</button>
+        <button class="tab" data-filter="air">MacBook Air</button>
+        <button class="tab" data-filter="pro">MacBook Pro</button>
+        <button class="tab" data-filter="ref">Восстановленные</button>
+        <button class="tab" data-filter="acc">Аксессуары</button>
+      </div>
+    </div>
+
+    <div class="grid-p" id="grid">
+      <article class="card prod" data-cat="air" data-tilt data-rv
+        data-name="MacBook Air 13&quot; M4 256 ГБ" data-price="109990" data-img="assets/img/p-air13.jpg">
+        <div class="prod-img">
+          <span class="prod-badge">Хит</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/p-air13.jpg" alt="MacBook Air 13 M4" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>MacBook Air 13" M4</h3>
+          <div class="prod-spec"><s>M4 10-core</s><s>16 ГБ</s><s>256 ГБ SSD</s><s>Midnight</s></div>
+          <div class="prod-foot">
+            <div class="price">109 990 ₽<s>или 9 166 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="air" data-tilt data-rv
+        data-name="MacBook Air 15&quot; M4 512 ГБ" data-price="139990" data-img="assets/img/p-air15.jpg">
+        <div class="prod-img">
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/p-air15.jpg" alt="MacBook Air 15 M4" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>MacBook Air 15" M4</h3>
+          <div class="prod-spec"><s>M4 10-core</s><s>16 ГБ</s><s>512 ГБ SSD</s><s>Starlight</s></div>
+          <div class="prod-foot">
+            <div class="price">139 990 ₽<s>или 11 666 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="pro" data-tilt data-rv
+        data-name="MacBook Pro 14&quot; M4 Pro 512 ГБ" data-price="199990" data-img="assets/img/p-pro14.jpg">
+        <div class="prod-img">
+          <span class="prod-badge gray">Новинка</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/p-pro14.jpg" alt="MacBook Pro 14 M4 Pro" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>MacBook Pro 14" M4 Pro</h3>
+          <div class="prod-spec"><s>M4 Pro 12-core</s><s>24 ГБ</s><s>512 ГБ SSD</s><s>Space Black</s></div>
+          <div class="prod-foot">
+            <div class="price">199 990 ₽<s>или 16 666 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="pro" data-tilt data-rv
+        data-name="MacBook Pro 16&quot; M4 Max 1 ТБ" data-price="329990" data-img="assets/img/p-pro16.jpg">
+        <div class="prod-img">
+          <span class="prod-badge">Топ</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/p-pro16.jpg" alt="MacBook Pro 16 M4 Max" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>MacBook Pro 16" M4 Max</h3>
+          <div class="prod-spec"><s>M4 Max 16-core</s><s>48 ГБ</s><s>1 ТБ SSD</s><s>Space Black</s></div>
+          <div class="prod-foot">
+            <div class="price">329 990 ₽<s>или 27 499 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="ref" data-tilt data-rv
+        data-name="MacBook Pro 14&quot; M3 (восстановленный)" data-price="149990" data-img="assets/img/p-pro13.jpg">
+        <div class="prod-img">
+          <span class="prod-badge gray">Refurbished</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/p-pro13.jpg" alt="MacBook Pro 14 M3" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>MacBook Pro 14" M3</h3>
+          <div class="prod-spec"><s>M3 8-core</s><s>16 ГБ</s><s>512 ГБ SSD</s><s>Цикл АКБ &lt; 50</s></div>
+          <div class="prod-foot">
+            <div class="price">149 990 ₽<s>или 12 499 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="ref" data-tilt data-rv
+        data-name="MacBook Air 13&quot; M2 (восстановленный)" data-price="84990" data-img="assets/img/p-air13m2.jpg">
+        <div class="prod-img">
+          <span class="prod-badge gray">Refurbished</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/p-air13m2.jpg" alt="MacBook Air 13 M2" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>MacBook Air 13" M2</h3>
+          <div class="prod-spec"><s>M2 8-core</s><s>8 ГБ</s><s>256 ГБ SSD</s><s>Silver</s></div>
+          <div class="prod-foot">
+            <div class="price">84 990 ₽<s>или 7 082 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="acc" data-tilt data-rv
+        data-name="AirPods Pro 2 (USB-C)" data-price="24990" data-img="assets/img/acc-airpods-pro.jpg">
+        <div class="prod-img">
+          <span class="prod-badge">Хит</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/acc-airpods-pro.jpg" alt="AirPods Pro 2" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>AirPods Pro 2</h3>
+          <div class="prod-spec"><s>Шумоподавление</s><s>USB-C</s><s>6 ч без кейса</s><s>Адаптивный звук</s></div>
+          <div class="prod-foot">
+            <div class="price">24 990 ₽<s>или 2 082 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="acc" data-tilt data-rv
+        data-name="AirPods Max (USB-C)" data-price="64990" data-img="assets/img/acc-airpods-max.jpg">
+        <div class="prod-img">
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/acc-airpods-max.jpg" alt="AirPods Max" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>AirPods Max</h3>
+          <div class="prod-spec"><s>Надушные</s><s>Spatial Audio</s><s>20 ч работы</s><s>5 цветов</s></div>
+          <div class="prod-foot">
+            <div class="price">64 990 ₽<s>или 5 416 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="acc" data-tilt data-rv
+        data-name="Apple Watch Series 10 46 мм" data-price="39990" data-img="assets/img/acc-watch2.jpg">
+        <div class="prod-img">
+          <span class="prod-badge gray">Новинка</span>
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/acc-watch2.jpg" alt="Apple Watch Series 10" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>Apple Watch Series 10</h3>
+          <div class="prod-spec"><s>46 мм</s><s>LTPO OLED</s><s>ЭКГ и SpO₂</s><s>Алюминий</s></div>
+          <div class="prod-foot">
+            <div class="price">39 990 ₽<s>или 3 332 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="acc" data-tilt data-rv
+        data-name="Apple Watch Ultra 2 49 мм" data-price="89990" data-img="assets/img/acc-watch.jpg">
+        <div class="prod-img">
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/acc-watch.jpg" alt="Apple Watch Ultra 2" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>Apple Watch Ultra 2</h3>
+          <div class="prod-spec"><s>49 мм</s><s>Титан</s><s>36 ч работы</s><s>100 м WR</s></div>
+          <div class="prod-foot">
+            <div class="price">89 990 ₽<s>или 7 499 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="card prod" data-cat="acc" data-tilt data-rv
+        data-name="AirPods 4 с шумоподавлением" data-price="19990" data-img="assets/img/acc-airpods.jpg">
+        <div class="prod-img">
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/acc-airpods.jpg" alt="AirPods 4" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>AirPods 4</h3>
+          <div class="prod-spec"><s>Открытые</s><s>ANC</s><s>30 ч с кейсом</s><s>USB-C</s></div>
+          <div class="prod-foot">
+            <div class="price">19 990 ₽<s>или 1 666 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card prod" data-cat="acc" data-tilt data-rv
+        data-name="Magic Keyboard с Touch ID" data-price="12990" data-img="assets/img/acc-keyboard.jpg">
+        <div class="prod-img">
+          <button class="prod-fav" aria-label="В избранное"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <img src="assets/img/acc-keyboard.jpg" alt="Magic Keyboard" loading="lazy">
+        </div>
+        <div class="prod-b">
+          <h3>Magic Keyboard</h3>
+          <div class="prod-spec"><s>Touch ID</s><s>Bluetooth</s><s>Русская раскладка</s><s>1 мес работы</s></div>
+          <div class="prod-foot">
+            <div class="price">12 990 ₽<s>или 1 082 ₽ × 12</s></div>
+            <button class="add" aria-label="В корзину"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-wrap">
+      <button class="btn btn--ghost" id="moreBtn"><span>Показать ещё</span><span class="ar">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATOR -->
+<section class="sec" id="config" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-rv>Конфигуратор</span>
+        <h2 class="h-lg split" data-rv style="margin-top:16px">Соберите свой MacBook</h2>
+      </div>
+      <p class="lead" data-rv>Цена пересчитывается сразу. Нужной сборки нет в наличии — привезём под заказ за 7–10 дней.</p>
+    </div>
+
+    <div class="cfg" data-rv>
+      <figure class="cfg-vis">
+        <img src="assets/img/cfg-air13.jpg" alt="Выбранная модель MacBook" id="cfgImg">
+        <div class="cfg-vis-top">
+          <span class="chip chip--live"><i></i>В наличии в Москве</span>
+          <span class="chip">Доставим завтра</span>
+        </div>
+        <figcaption class="cfg-vis-bot">
+          <div class="cfg-name" id="cfgName">MacBook Air 13"</div>
+          <div class="cfg-tags" id="cfgTags"></div>
+        </figcaption>
+      </figure>
+
+      <div class="card cfg-box">
+        <div class="opt-g">
+          <h4>Модель</h4>
+          <div class="opts" data-group="model">
+            <button class="opt on" data-price="109990" data-img="assets/img/cfg-air13.jpg" data-label='MacBook Air 13"' data-chip="M4">Air 13"<s>M4</s></button>
+            <button class="opt" data-price="139990" data-img="assets/img/cfg-air15.jpg" data-label='MacBook Air 15"' data-chip="M4">Air 15"<s>M4</s></button>
+            <button class="opt" data-price="199990" data-img="assets/img/cfg-pro14.jpg" data-label='MacBook Pro 14"' data-chip="M4 Pro">Pro 14"<s>M4 Pro</s></button>
+            <button class="opt" data-price="329990" data-img="assets/img/cfg-pro16.jpg" data-label='MacBook Pro 16"' data-chip="M4 Max">Pro 16"<s>M4 Max</s></button>
+          </div>
+        </div>
+        <div class="opt-g">
+          <h4>Оперативная память</h4>
+          <div class="opts" data-group="ram">
+            <button class="opt on" data-price="0" data-label="16 ГБ">16 ГБ</button>
+            <button class="opt" data-price="22000" data-label="24 ГБ">24 ГБ</button>
+            <button class="opt" data-price="44000" data-label="32 ГБ">32 ГБ</button>
+            <button class="opt" data-price="88000" data-label="48 ГБ">48 ГБ</button>
+          </div>
+        </div>
+        <div class="opt-g">
+          <h4>Накопитель</h4>
+          <div class="opts" data-group="ssd">
+            <button class="opt on" data-price="0" data-label="256 ГБ">256 ГБ</button>
+            <button class="opt" data-price="18000" data-label="512 ГБ">512 ГБ</button>
+            <button class="opt" data-price="46000" data-label="1 ТБ">1 ТБ</button>
+            <button class="opt" data-price="94000" data-label="2 ТБ">2 ТБ</button>
+          </div>
+        </div>
+        <div class="opt-g">
+          <h4>Цвет</h4>
+          <div class="opts" data-group="color">
+            <button class="opt on" data-price="0" data-label="Midnight"><i class="sw" style="background:#2E3641"></i>Midnight</button>
+            <button class="opt" data-price="0" data-label="Starlight"><i class="sw" style="background:#F0E4D3"></i>Starlight</button>
+            <button class="opt" data-price="0" data-label="Silver"><i class="sw" style="background:#E3E4E6"></i>Silver</button>
+            <button class="opt" data-price="6000" data-label="Space Black"><i class="sw" style="background:#1D1D1F"></i>Space Black</button>
+          </div>
+        </div>
+
+        <div class="cfg-sum" id="cfgSum"></div>
+
+        <div class="cfg-total">
+          <div class="price" id="cfgPrice">109 990 ₽<s id="cfgMonth">9 166 ₽ × 12 месяцев</s></div>
+          <button class="btn" id="cfgAdd"><span>В корзину</span><span class="ar">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESSORIES -->
+<section class="sec" id="acc" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-rv>Аксессуары</span>
+        <h2 class="h-lg split" data-rv style="margin-top:16px">Дополните экосистему</h2>
+      </div>
+      <a href="#catalog" class="btn btn--ghost" data-rv data-tab="acc"><span>Все аксессуары</span></a>
+    </div>
+    <div class="trio">
+      <a href="#catalog" data-tab="acc" class="trio-i trio-i--big" data-rv data-parallax>
+        <img src="assets/img/acc-airpods-max.jpg" alt="AirPods Max" loading="lazy">
+        <div class="t"><div><span class="chip">Наушники</span><h3>AirPods Max</h3><p>Полноразмерные, Spatial Audio · от 64 990 ₽</p></div>
+          <span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a href="#catalog" data-tab="acc" class="trio-i" data-rv style="transition-delay:.12s" data-parallax>
+        <img src="assets/img/acc-airpods-pro.jpg" alt="AirPods Pro 2" loading="lazy">
+        <div class="t"><div><h3>AirPods Pro 2</h3><p>Шумоподавление · от 24 990 ₽</p></div>
+          <span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a href="#catalog" data-tab="acc" class="trio-i" data-rv style="transition-delay:.24s" data-parallax>
+        <img src="assets/img/acc-watch2.jpg" alt="Apple Watch" loading="lazy">
+        <div class="t"><div><h3>Apple Watch</h3><p>Series 10 и Ultra 2 · от 39 990 ₽</p></div>
+          <span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MORPH: плашки собираются в кнопку -->
+<section class="morph" id="morph"><a id="why" class="anchor"></a>
+  <canvas class="mesh mesh--full" id="mesh2" aria-hidden="true"></canvas>
+  <div class="morph-sticky">
+    <div class="morph-stage">
+      <div class="morph-top">
+        <span class="eyebrow">Что входит в покупку</span>
+        <h2 class="morph-h">без доплат<br>и мелкого шрифта</h2>
+      </div>
+
+      <div class="morph-cards">
+        <span class="mcard" style="--x:-32vw;--y:-17vh"><b>Проверка при вас</b></span>
+        <span class="mcard" style="--x:14vw;--y:-20vh"><b>Гарантия 12 месяцев</b></span>
+        <span class="mcard" style="--x:-38vw;--y:4vh"><b>Trade-in до 120 000 ₽</b></span>
+        <span class="mcard" style="--x:34vw;--y:-6vh"><b>Рассрочка 0%</b></span>
+        <span class="mcard" style="--x:-32vw;--y:25vh"><b>Доставка 1–3 дня</b></span>
+        <span class="mcard" style="--x:0vw;--y:25vh"><b>Настройка в подарок</b></span>
+        <span class="mcard" style="--x:33vw;--y:19vh"><b>Подменный на время ремонта</b></span>
+        <span class="mcard" style="--x:-9vw;--y:-23vh"><b>Свой сервис-центр</b></span>
+      </div>
+
+      <div class="morph-bottom">
+        <div class="mb-txt">
+          <h3 class="h-md">Осталось выбрать модель</h3>
+          <p class="lead">Скажите, что вы делаете за ноутбуком, — остальное соберём сами.</p>
+        </div>
+        <a href="#cta" class="btn btn--lg morph-btn"><span>Подобрать MacBook</span><span class="ar">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow" data-rv>Вопросы</span>
+      <h2 class="h-lg split" data-rv style="margin-top:16px">Что обычно спрашивают</h2></div></div>
+    <div data-rv>
+      <div class="faq-i"><button class="faq-q">Техника новая и официальная?<span class="pm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Да. Все новые ноутбуки — запечатанные, с проверкой серийного номера по базе Apple при вас. Восстановленные модели мы честно помечаем как Refurbished и указываем количество циклов батареи.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Как быстро доставите?<span class="pm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>По Москве — в день заказа, если оформили до 18:00. По России — 1–3 дня курьером СДЭК с возможностью проверки до оплаты. Конфигурации под заказ — 7–10 дней.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Есть ли рассрочка?<span class="pm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Да, 0% на 6, 12 или 24 месяца без первого взноса и переплаты. Решение по заявке — около двух минут, нужен только паспорт.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Что с гарантией и сервисом?<span class="pm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>12 месяцев гарантии магазина плюс собственный сервисный центр. На время ремонта выдаём подменный ноутбук, чтобы вы не выпадали из работы.</p></div></div>
+      <div class="faq-i"><button class="faq-q">Принимаете старую технику в trade-in?<span class="pm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Принимаем MacBook, iPhone и iPad — оценка до 120 000 ₽ за счёт стоимости новой покупки. Оценщик приезжает вместе с курьером.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta" id="cta" data-rv>
+      <div class="cta-txt">
+        <span class="eyebrow">Отвечает человек, не бот</span>
+        <h2 class="h-lg split" style="margin:20px 0 18px">Не уверены, какой Mac брать?</h2>
+        <p class="lead">Напишите пару слов о задачах — разберём, где разница между M4 и M4 Pro реально заметна, а где вы просто переплатите тысяч восемьдесят. Если сейчас поздний вечер, ответим утром, как только откроемся.</p>
+        <div class="cta-person">
+          <span class="av">А</span>
+          <div>
+            <b>Артём Веснин</b>
+            <s>подбор техники · обычно отвечает за 15 минут</s>
+          </div>
+          <span class="chip chip--live"><i></i>сегодня до 21:00</span>
+        </div>
+      </div>
+
+      <form class="lead-form" id="leadForm" novalidate>
+        <div class="fld">
+          <label for="lName">Как вас зовут</label>
+          <input id="lName" name="name" type="text" placeholder="Иван" autocomplete="name" required>
+        </div>
+        <div class="fld">
+          <label for="lPhone">Телефон</label>
+          <input id="lPhone" name="phone" type="tel" placeholder="+7 (999) 123-45-67" autocomplete="tel" required>
+        </div>
+        <div class="fld">
+          <label for="lWhat">Что нужно</label>
+          <select id="lWhat" name="what">
+            <option>Ноутбук для работы и учёбы</option>
+            <option>Машина под монтаж, 3D или разработку</option>
+            <option>Наушники, часы, аксессуары</option>
+            <option>Оснастить команду</option>
+            <option>Сам не знаю — нужен совет</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label>Как удобнее связаться</label>
+          <div class="ways" id="lWays">
+            <button type="button" class="way on" data-way="Звонок">Позвонить</button>
+            <button type="button" class="way" data-way="Telegram">Telegram</button>
+            <button type="button" class="way" data-way="WhatsApp">WhatsApp</button>
+          </div>
+        </div>
+        <input type="text" name="hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--lg" type="submit"><span>Отправить</span><span class="ar">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <p class="f-msg" id="leadMsg" role="status"></p>
+        <p class="f-note">Звоним с номера <a href="tel:+74951234567">+7 495 123-45-67</a> — можете сохранить заранее. Контакты никому не передаём, рассылок не делаем.</p>
+        <div class="f-done" id="leadDone" hidden>
+          <span class="ok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <b>Записал, спасибо</b>
+          <p>Артём наберёт в ближайшие 15 минут. Если не дозвонится — напишет в мессенджер, чтобы не отвлекать звонками.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="wrap ftr">
+  <div class="ftr-top">
+    <div>
+      <div class="logo" style="font-size:22px">mac<em>:</em>lab</div>
+      <p class="lead" style="margin-top:12px;font-size:14px">Техника Apple с проверкой при получении</p>
+      <a href="mailto:hello@maclab.ru" class="mail">hello@<b>maclab</b>.ru</a>
+    </div>
+    <div><h5>Компания</h5><ul>
+      <li><a href="#why">О нас</a></li><li><a href="#why">Команда</a></li>
+      <li><a href="#config">Конфигуратор</a></li><li><a href="#faq">Спецусловия</a></li>
+      <li><a href="#faq">Контакты</a></li></ul></div>
+    <div><h5>Продукция</h5><ul>
+      <li><a href="#catalog">MacBook Air</a></li><li><a href="#catalog">MacBook Pro</a></li>
+      <li><a href="#acc">AirPods</a></li><li><a href="#acc">Apple Watch</a></li>
+      <li><a href="#catalog">iMac</a></li></ul></div>
+    <div><h5>Контакты</h5><ul>
+      <li><a href="tel:+74951234567">+7 495 123-45-67</a></li>
+      <li><a href="mailto:hello@maclab.ru">hello@maclab.ru</a></li>
+      <li><a href="#">Москва, Пресненская наб. 12</a></li>
+      <li><a href="#">Ежедневно 10:00–21:00</a></li></ul></div>
+  </div>
+  <div class="ftr-bot">
+    <span>© 2026 mac:lab. Все права защищены</span>
+    <div class="socs"><a href="#">Telegram</a> · <a href="#">VK</a> · <a href="#">YouTube</a></div>
+    <a href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<!-- CART -->
+<div class="scrim" id="scrim"></div>
+<aside class="cart" id="cart" aria-label="Корзина">
+  <div class="cart-h">
+    <b style="font-family:var(--f-disp);font-size:17px;letter-spacing:-.03em">Корзина</b>
+    <button class="icb" id="cartClose" aria-label="Закрыть">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="cart-b" id="cartBody"><p class="cart-empty">Пока пусто — добавьте технику из каталога</p></div>
+  <div class="cart-f">
+    <div style="display:flex;justify-content:space-between;align-items:baseline">
+      <span style="color:var(--txt-dim);font-size:14px">Итого</span>
+      <span class="price" id="cartTotal">0 ₽</span>
+    </div>
+    <form class="cart-form" id="orderForm" novalidate>
+      <div class="fld"><label for="oName">Ваше имя</label>
+        <input id="oName" name="name" type="text" placeholder="Иван" autocomplete="name" required></div>
+      <div class="fld"><label for="oPhone">Телефон</label>
+        <input id="oPhone" name="phone" type="tel" placeholder="+7 (999) 123-45-67" autocomplete="tel" required></div>
+      <input type="text" name="hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" style="justify-content:center" type="submit"><span>Оформить заказ</span></button>
+      <p class="f-msg" id="orderMsg" role="status"></p>
+    </form>
+  </div>
+</aside>
+
+<script src="assets/js/vendor/lenis.min.js"></script>
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/*
+Theme Name: mac:lab
+Theme URI: https://example.com/maclab
+Author: Иван
+Description: Тёмная тема-лендинг для магазина техники Apple: каталог из админки, конфигуратор, корзина, заявки и заказы прямо в WordPress.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+License: GPLv2 or later
+Text Domain: maclab
+*/
+
+/* Стили лежат в assets/css/style.css — этот файл нужен WordPress только для заголовка темы. */
